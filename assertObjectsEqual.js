@@ -26,9 +26,8 @@ const eqObjects = function(object1, object2) {
 const assertObjectsEqual = function(actual, expected) {
   if (eqObjects(actual, expected)) {
     return `✅✅✅ Assertion Passed! Horrah!`;
-  } else {
+  } 
     return `🛑🛑🛑 Assertion Failed! Sad face :(`;
-  }
 };
 
 // TEST RUN PRIMITIVE VALUES
