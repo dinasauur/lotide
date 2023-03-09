@@ -1,8 +1,8 @@
-const eqArrays = function (list1, list2){
+const eqArrays = function(list1, list2) {
   for (let i = 0; i < list1.length; i++) {
-    if (list1[i] !== list2[i]){
+    if (list1[i] !== list2[i]) {
       return false;
-    } 
+    }
   } return true;
 };
 
@@ -13,13 +13,13 @@ const assertArraysEqual = function(actual, expected) {
     return `✅✅✅ Assertion Passed`;
   } else {
     return `🛑🛑🛑 Assertion Failed`;
-  } 
+  }
 };
 
 console.log(assertArraysEqual([1, 2, 3], [1, 2, '3']));
 
 /*
-METHOD 2 
+METHOD 2
 
 const assertArraysEqual = function (answer) {
 
@@ -27,7 +27,7 @@ const assertArraysEqual = function (answer) {
     return `✅✅✅ Assertion Passed: ${answer}`;
   } else {
     return `🛑🛑🛑 Assertion Failed: ${answer}`;
-  } 
+  }
 };
 
 console.log(assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3])));

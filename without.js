@@ -1,4 +1,4 @@
-const without = function(source, itemsToRemove){
+const without = function(source, itemsToRemove) {
   let arrayToReturn = [];
 
   source.forEach(element => {

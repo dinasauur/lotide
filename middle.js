@@ -1,8 +1,8 @@
-const eqArrays = function (list1, list2){
+const eqArrays = function(list1, list2) {
   for (let i = 0; i < list1.length; i++) {
-    if (middle(list1)[i] !== list2[i]){
+    if (middle(list1)[i] !== list2[i]) {
       return false;
-    } 
+    }
   } return true;
 };
 
@@ -11,19 +11,20 @@ const assertArraysEqual = function(actual, expected) {
     return `✅✅✅ Assertion Passed`;
   } else {
     return `🛑🛑🛑 Assertion Failed`;
-  } 
+  }
 };
 
 const middle = function(array) {
   let newArray = [];
   const length = array.length;
+  let searchMiddleIndex = Math.floor(length / 2);
   
   if (length > 2 && length % 2 !== 0) {
-    let searchMiddleIndex = Math.floor(length/2);
+    searchMiddleIndex;
     newArray.push(array[searchMiddleIndex]);
   } else if (length > 2 && length % 2 === 0) {
-    searchMiddleIndex = Math.floor(length/2);
-    let searchSecondMiddleIndex = Math.floor((length-1)/2);
+    searchMiddleIndex;
+    let searchSecondMiddleIndex = Math.floor((length - 1) / 2);
     newArray.push(array[searchSecondMiddleIndex], array[searchMiddleIndex]);
   }
   return newArray;
