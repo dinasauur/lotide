@@ -12,7 +12,7 @@ const findKeyByValue = function(movieObj, arg) {
     if (movieObj[movie] === arg) {
       output = movie;
     } else if (movieObj[movie] !== arg) {
-      output = undefined
+      output = undefined;
     }
   }
   return output;
