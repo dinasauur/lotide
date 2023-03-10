@@ -1,16 +1,15 @@
-
 const takeUntil = function(array, callback) {
   let result = [];
 
   for (const value of array) {
-    if (!callback(value)) {
-      result.push(value);
-    }
-
     if (callback(value)) {
       return result;
     }
+
+    result.push(value);
   }
+  
+  return result;
 };
 
 const eqArrays = function(list1, list2) {

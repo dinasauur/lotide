@@ -11,11 +11,16 @@ const countLetter = function(string) {
   let newString = string.split(' ').join('');
 
   for (const alphabet of newString) {
+    if (!count[alphabet]) {
+      count[alphabet] = 0;
+    } 
+      count[alphabet]++;
+    /*
     if (count[alphabet]) {
       count[alphabet]++;
     } else {
       count[alphabet] = 1;
-    }
+    } */
   } return count;
 };
 

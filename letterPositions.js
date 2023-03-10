@@ -34,21 +34,23 @@ const letterPositions = function(sentence) {
   const results = {};
 
   const newSentence = sentence.toLowerCase().split(' ').join('');
-  for (let index = 0; index < newSentence.length; index++) {
-    // index -> indices
-    // newSentence[index] -> actual value
+  for (let index in newSentence) {
     const value = newSentence[index];
 
-    if (results[value]) {
-      results[value].push(index);
-    } else {
-      results[value] = [index];
+    if (!results[value]) {
+      results[value] = [];
     }
+      //Happy Path
+      results[value].push(index);
+    
   } return results;
 };
 
+console.log(letterPositions("Hello World"));
 
 
 console.log(assertArraysEqual(letterPositions("hello").e, [1]));
+
+
 
 
