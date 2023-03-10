@@ -10,13 +10,14 @@ const eqArrays = function(list1, list2) {
 
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
-    return `✅✅✅ Assertion Passed`;
+    return `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
   } else {
-    return `🛑🛑🛑 Assertion Failed`;
+    return `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
   }
 };
 
-console.log(assertArraysEqual([1, 2, 3], [1, 2, '3']));
+
+console.log(assertArraysEqual([1, 2, 3], [1, 2, '3'])); 
 
 /*
 METHOD 2
