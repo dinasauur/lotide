@@ -1,23 +1,17 @@
-const eqArrays = function(list1, list2) {
-  for (let i = 0; i < list1.length; i++) {
-    if (list1[i] !== list2[i]) {
-      return false;
-    }
-  } return true;
-};
+const eqArray = require('./eqArray');
 
 //METHOD 1 - calling the eqArrays function inside the asserArraysEqual function.
 
-const assertArraysEqual = function(actual, expected) {
-  if (eqArrays(actual, expected)) {
+const assertArraysEqual = function(actual,expected){
+  if (eqArray(actual, expected)) {
     return `✅✅✅ Assertion Passed: ${actual} === ${expected}`;
-  } else {
-    return `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
-  }
+  
+  } 
+  return `🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`;
 };
 
+module.exports = assertArraysEqual;
 
-console.log(assertArraysEqual([1, 2, 3], [1, 2, '3'])); 
 
 /*
 METHOD 2
