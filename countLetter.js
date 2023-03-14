@@ -24,6 +24,10 @@ const countLetter = function(string) {
   } return count;
 };
 
+module.exports = countLetter;
+
+/*
+
 let str = "lighthouse in the house";
 
 const result = countLetter(str);
@@ -32,6 +36,7 @@ assertEqual(result.l, 1); // Should pass
 assertEqual(result.i, 2); // Should pass
 assertEqual(result.g, 2); // Should fail
 
+*/
 
 // Notes for my own understanding
 // Example - string = "I love rock n roll!"

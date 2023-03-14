@@ -44,6 +44,9 @@ const assertObjectsEqual = function(actual, expected) {
   return `🛑🛑🛑 Assertion Failed! Sad face :( ${inspect(actual)} !== ${inspect(expected)}`;
 };
 
+module.exports = assertObjectsEqual;
+
+/*
 // TEST RUN PRIMITIVE VALUES
 const shirtObject = { color: "red", size: "medium" };
 const anotherShirtObject = { size: "medium", color: "red" };
@@ -61,3 +64,5 @@ const longSleeveMultiColorShirtObject = { size: "medium", colors: ["red", "blue"
 
 console.log(assertObjectsEqual(multiColorShirtObject, longSleeveMultiColorShirtObject)); // Should fail
 console.log(assertObjectsEqual(multiColorShirtObject, anotherMultiColorShirtObject)); // Should pass
+
+*/
